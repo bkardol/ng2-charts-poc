@@ -1,0 +1,49 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 720px;
+  max-height: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.graph {
+  &__filters {
+    display: flex;
+    button {
+      flex-basis: 33.33%;
+      margin: 1rem;
+      height: 3rem;
+      background-color: white;
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
+      font-size: 1.05rem;
+
+      &:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      &.graph__filter--active {
+        background-color: var(--accent-color);
+        color: white;
+      }
+
+      fa-icon {
+        padding-right: 0.4rem;
+      }
+    }
+  }
+
+  &__container {
+    flex: 1 0 auto;
+
+    ::ng-deep {
+      .chart-legend .legend-labels {
+        background: transparent;
+      }
+    }
+  }
+}

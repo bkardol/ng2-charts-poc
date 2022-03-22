@@ -1,0 +1,22 @@
+:root {
+  --text-color-rgb: 51, 51, 51;
+  --text-color: rgb(var(--text-color-rgb));
+
+  --primary-color-rgb: 0, 169, 209;
+  --primary-color: rgb(var(--primary-color-rgb));
+
+  --accent-color-rgb: 227, 18, 104;
+  --accent-color: rgb(var(--accent-color-rgb));
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+body, button {
+  color: var(--text-color);
+}

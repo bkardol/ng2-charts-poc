@@ -1,0 +1,39 @@
+<div class="graph__filters">
+  <button
+    (click)="setActive('euro')"
+    [class.graph__filter--active]="activeFilter === 'euro'"
+  >
+    <fa-icon [icon]="euroIcon"></fa-icon>
+    Euro</button
+  ><button
+    (click)="setActive('electricity')"
+    [class.graph__filter--active]="activeFilter === 'electricity'"
+  >
+    <fa-icon [icon]="electricityIcon"></fa-icon>
+    Stroom</button
+  ><button
+    (click)="setActive('gas')"
+    [class.graph__filter--active]="activeFilter === 'gas'"
+  >
+    <fa-icon [icon]="gasIcon"></fa-icon>
+    Gas
+  </button>
+</div>
+
+<div class="graph__filters">
+  <button>Dagen</button>
+  <button class="graph__filter--active">Maanden</button>
+  <button>Jaren</button>
+</div>
+
+<div #containerRef class="graph__container">
+  <canvas
+    baseChart
+    [datasets]="data"
+    [labels]="labels"
+    [options]="options"
+    [legend]="isElectricity"
+    chartType="bar"
+  >
+  </canvas>
+</div>
